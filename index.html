@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fran Plast</title>
+  
+  <!-- Ícone da Aba do Navegador -->
+  <link rel="icon" type="image/png" href="img/img_fran.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandRed: '#D32F2F',
+            brandDark: '#1E1E1E',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+<!-- ================= HEADER ================= -->
+  <header class="sticky top-0 z-40 bg-white shadow-sm border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
+      
+      <!-- LOGO -->
+      <a href="#" class="flex items-center">
+        <img src="img/img_fran.png" alt="Fran Plast Logo" class="h-14 md:h-16 object-contain">
+      </a>
+
+      <nav class="hidden md:flex gap-6 font-semibold text-gray-700 text-sm">
+        <a href="#inicio" class="hover:text-brandRed transition">Início</a>
+        <a href="#tecidos-estampados" class="hover:text-brandRed transition">Tecidos Estampados</a>
+        <a href="#tecidos-lisos" class="hover:text-brandRed transition">Tecidos Lisos</a>
+        <a href="#plasticos" class="hover:text-brandRed transition">Plásticos</a>
+        <a href="#aviamentos" class="hover:text-brandRed transition">Aviamentos & Insumos</a>
+        <a href="#contato" class="hover:text-brandRed transition">Contato</a>
+      </nav>
+
+      <a href="https://wa.me/5511965050312?text=Olá!%20Vim%20pelo%20site%20da%20Fran%20Plast" 
+         target="_blank" 
+         class="hidden md:inline-flex bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-4 py-2 rounded-lg transition text-sm items-center gap-2 shadow-sm">
+        <i class="fab fa-whatsapp text-lg"></i> Pedir pelo WhatsApp
+      </a>
+
+      <button id="menu-btn" class="md:hidden text-gray-800 text-2xl focus:outline-none" aria-label="Abrir Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+<!-- ================= HERO ================= -->
+  <section id="inicio" class="py-10 md:py-16 bg-gradient-to-br from-brandDark via-gray-900 to-black text-white px-4 overflow-hidden">
+    <!-- Mudamos de max-w-7xl para max-w-full px-6 md:px-12 -->
+    <div class="max-w-full px-6 md:px-12 mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+      
+      <!-- LADO ESQUERDO: LOGO -->
+      <div class="flex-1 flex justify-center md:justify-start">
+        <img src="img/img_fran.png" alt="Fran Plast Logo" class="max-h-64 md:max-h-80 object-contain drop-shadow-2xl">
+      </div>
+
+      <!-- CENTRO: DESCRIÇÃO E BOTÕES -->
+      <div class="flex-[1.5] text-center space-y-5">
+        <div>
+          <span class="inline-block bg-brandRed text-white text-xs md:text-sm px-4 py-1 rounded-full uppercase tracking-wider font-bold">
+            Há 12 Anos no Mercado • Brás - SP
+          </span>
+        </div>
+        <h1 class="text-2xl md:text-4xl font-black leading-tight">
+          Catálogo Completo para Fabricantes de Camas & Ateliês Pet
+        </h1>
+        <p class="text-gray-300 text-sm md:text-base max-w-xl mx-auto">
+          Navegue pelas fotos dos nossos produtos e solicite o orçamento da estampa ou cor desejada diretamente no WhatsApp. Siga-nos também no Instagram.
+        </p>
+        <div class="pt-2 flex flex-col sm:flex-row justify-center gap-4">
+          <a href="https://wa.me/5511965050312?text=Olá!%20Gostaria%20de%20consultar%20preços%20e%20estoque." 
+             target="_blank"
+             class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-5 rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-sm md:text-base">
+            <i class="fab fa-whatsapp text-xl"></i> Falar com Atendente
+          </a>
+          <a href="https://www.instagram.com/fran_plast/" target="_blank" class="bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-5 rounded-xl transition flex items-center justify-center gap-2 text-sm md:text-base">
+            <i class="fab fa-instagram text-xl"></i> Instagram @fran_plast
+          </a>
+        </div>
+      </div>
+
+      <!-- LADO DIREITO: MASCOTE -->
+      <div class="flex-1 flex justify-center md:justify-end md: mr-8 lg:-mr-16">
+        <img width="" src="img/mascote_bruno.png" alt="Mascote Fran Plast" class="max-h-64 md:max-h-80 object-contain drop-shadow-2xl">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= TECIDOS ESTAMPADOS ================= -->
+  <section id="tecidos-estampados" class="py-12 max-w-7xl mx-auto px-4">
+    <div class="border-b border-gray-200 pb-4 mb-8">
+      <h2 class="text-2xl md:text-3xl font-black text-gray-900 flex items-center gap-2">
+        <i class="fas fa-palette text-brandRed"></i> Tecidos Estampados
+      </h2>
+      <p class="text-gray-600 text-sm mt-1">Navegue pelas setas na imagem e clique em "Pedir Esta Estampa" para enviar ao WhatsApp</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+      <!-- Tricoline Estampado -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+        <div class="relative h-48 bg-gray-100">
+          <img id="img-tricoline_estampado" src="img/tricoline-1.jpeg" class="w-full h-48 object-cover">
+          <button onclick="mudarFoto('tricoline_estampado', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-left"></i></button>
+          <button onclick="mudarFoto('tricoline_estampado', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+          <div>
+            <h3 class="font-bold text-lg text-gray-900">Tricoline Estampado</h3>
+            <p class="text-xs text-gray-600 mt-1">Tecido misto com 67% Algodão, 33% Poliéster,
+              
+              leve e de alta qualidade.</p>
+          </div>
+          <button onclick="enviarParaWhatsApp('Tricoline Estampado', 'tricoline_estampado')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+            <i class="fab fa-whatsapp text-sm"></i> Pedir Esta Estampa
+          </button>
+        </div>
+      </div>
+
+      <!-- Gorgurinho Estampado -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+        <div class="relative h-48 bg-gray-100">
+          <img id="img-gorgurinho_estampado" src="img/gorgurinho-1.jpeg" class="w-full h-48 object-cover">
+          <button onclick="mudarFoto('gorgurinho_estampado', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-left"></i></button>
+          <button onclick="mudarFoto('gorgurinho_estampado', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+          <div>
+            <h3 class="font-bold text-lg text-gray-900">Gorgurinho Estampado</h3>
+            <p class="text-xs text-gray-600 mt-1">Tecido encorpado para caminhabilidade e estrutura.</p>
+          </div>
+          <button onclick="enviarParaWhatsApp('Gorgurinho Estampado', 'gorgurinho_estampado')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+            <i class="fab fa-whatsapp text-sm"></i> Pedir Esta Estampa
+          </button>
+        </div>
+      </div>
+
+      <!-- Corino Estampado -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+        <div class="relative h-48 bg-gray-100">
+          <img id="img-corino_estampado" src="img/corino-1.jpeg" class="w-full h-48 object-cover">
+          <button onclick="mudarFoto('corino_estampado', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-left"></i></button>
+          <button onclick="mudarFoto('corino_estampado', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+          <div>
+            <h3 class="font-bold text-lg text-gray-900">Corino Estampado</h3>
+            <p class="text-xs text-gray-600 mt-1">Impermeável, resistente e estamparia durável.</p>
+          </div>
+          <button onclick="enviarParaWhatsApp('Corino Estampado', 'corino_estampado')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+            <i class="fab fa-whatsapp text-sm"></i> Pedir Esta Estampa
+          </button>
+        </div>
+      </div>
+
+      <!-- Oxford Estampado -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+        <div class="relative h-48 bg-gray-100">
+          <img id="img-oxford_estampado" src="img/oxford-1.jpeg" class="w-full h-48 object-cover">
+          <button onclick="mudarFoto('oxford_estampado', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-left"></i></button>
+          <button onclick="mudarFoto('oxford_estampado', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+          <div>
+            <h3 class="font-bold text-lg text-gray-900">Oxford Estampado</h3>
+            <p class="text-xs text-gray-600 mt-1">Resistência elevada com secagem rápida.</p>
+          </div>
+          <button onclick="enviarParaWhatsApp('Oxford Estampado', 'oxford_estampado')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+            <i class="fab fa-whatsapp text-sm"></i> Pedir Esta Estampa
+          </button>
+        </div>
+      </div>
+
+      <!-- Tactel Estampado -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+        <div class="relative h-48 bg-gray-100">
+          <img id="img-tactel_estampado" src="img/tactel-1.jpeg" class="w-full h-48 object-cover">
+          <button onclick="mudarFoto('tactel_estampado', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-left"></i></button>
+          <button onclick="mudarFoto('tactel_estampado', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+          <div>
+            <h3 class="font-bold text-lg text-gray-900">Tactel Estampado</h3>
+            <p class="text-xs text-gray-600 mt-1">Microfibra estampada macia e leve.</p>
+          </div>
+          <button onclick="enviarParaWhatsApp('Tactel Estampado', 'tactel_estampado')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+            <i class="fab fa-whatsapp text-sm"></i> Pedir Esta Estampa
+          </button>
+        </div>
+      </div>
+
+      <!-- Ultra Soft Estampado -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+        <div class="relative h-48 bg-gray-100">
+          <img id="img-ultrasoft_estampado" src="https://via.placeholder.com/400x300?text=Ultra+Soft+Estampa+1" class="w-full h-48 object-cover">
+          <button onclick="mudarFoto('ultrasoft_estampado', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-left"></i></button>
+          <button onclick="mudarFoto('ultrasoft_estampado', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+          <div>
+            <h3 class="font-bold text-lg text-gray-900">Ultra Soft Estampado</h3>
+            <p class="text-xs text-gray-600 mt-1">Toque extremamente aveludado e macio.</p>
+          </div>
+          <button onclick="enviarParaWhatsApp('Ultra Soft Estampado', 'ultrasoft_estampado')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+            <i class="fab fa-whatsapp text-sm"></i> Pedir Esta Estampa
+          </button>
+        </div>
+      </div>
+
+      <!-- Pele Agatha Estampada -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+        <div class="relative h-48 bg-gray-100">
+          <img id="img-pele_agatha_estampada" src="img/pele-1.jpeg" class="w-full h-48 object-cover">
+          <button onclick="mudarFoto('pele_agatha_estampada', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-left"></i></button>
+          <button onclick="mudarFoto('pele_agatha_estampada', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+          <div>
+            <h3 class="font-bold text-lg text-gray-900">Pele Agatha Estampada</h3>
+            <p class="text-xs text-gray-600 mt-1">Pelúcia sintética estampada de alta densidade.</p>
+          </div>
+          <button onclick="enviarParaWhatsApp('Pele Agatha Estampada', 'pele_agatha_estampada')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+            <i class="fab fa-whatsapp text-sm"></i> Pedir Esta Estampa
+          </button>
+        </div>
+      </div>
+
+      <!-- Velboa Estampado -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+        <div class="relative h-48 bg-gray-100">
+          <img id="img-velboa_estampado" src="img/velboa-1.jpeg" class="w-full h-48 object-cover">
+          <button onclick="mudarFoto('velboa_estampado', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-left"></i></button>
+          <button onclick="mudarFoto('velboa_estampado', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+          <div>
+            <h3 class="font-bold text-lg text-gray-900">Velboa Estampado</h3>
+            <p class="text-xs text-gray-600 mt-1">Pelo curto super macio para caminhas aconchegantes.</p>
+          </div>
+          <button onclick="enviarParaWhatsApp('Velboa Estampado', 'velboa_estampado')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+            <i class="fab fa-whatsapp text-sm"></i> Pedir Esta Estampa
+          </button>
+        </div>
+      </div>
+
+      <!-- Sherpa Estampada -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+        <div class="relative h-48 bg-gray-100">
+          <img id="img-sherpa_estampada" src="img/sherpa-1.jpeg" class="w-full h-48 object-cover">
+          <button onclick="mudarFoto('sherpa_estampada', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-left"></i></button>
+          <button onclick="mudarFoto('sherpa_estampada', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+          <div>
+            <h3 class="font-bold text-lg text-gray-900">Sherpa Estampada</h3>
+            <p class="text-xs text-gray-600 mt-1">Efeito pele de carneiro aquecida com estampas.</p>
+          </div>
+          <button onclick="enviarParaWhatsApp('Sherpa Estampada', 'sherpa_estampada')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+            <i class="fab fa-whatsapp text-sm"></i> Pedir Esta Estampa
+          </button>
+        </div>
+      </div>
+
+      <!-- Dijon Estampado -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+        <div class="relative h-48 bg-gray-100">
+          <img id="img-dijon_estampado" src="img/dijon-1.jpeg" class="w-full h-48 object-cover">
+          <button onclick="mudarFoto('dijon_estampado', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-left"></i></button>
+          <button onclick="mudarFoto('dijon_estampado', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+          <div>
+            <h3 class="font-bold text-lg text-gray-900">Dijon Estampado</h3>
+            <p class="text-xs text-gray-600 mt-1">Tecido técnico com textura diferenciada.</p>
+          </div>
+          <button onclick="enviarParaWhatsApp('Dijon Estampado', 'dijon_estampado')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+            <i class="fab fa-whatsapp text-sm"></i> Pedir Esta Estampa
+          </button>
+        </div>
+      </div>
+
+      <!-- Micro Pet Estampado -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+        <div class="relative h-48 bg-gray-100">
+          <img id="img-micropet_estampado" src="img/micropet_1.jpeg" class="w-full h-48 object-cover">
+          <button onclick="mudarFoto('micropet_estampado', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-left"></i></button>
+          <button onclick="mudarFoto('micropet_estampado', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+          <div>
+            <h3 class="font-bold text-lg text-gray-900">Micro Pet Estampado</h3>
+            <p class="text-xs text-gray-600 mt-1">Ideal para colchonetes e mantas pet.</p>
+          </div>
+          <button onclick="enviarParaWhatsApp('Micro Pet Estampado', 'micropet_estampado')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+            <i class="fab fa-whatsapp text-sm"></i> Pedir Esta Estampa
+          </button>
+        </div>
+      </div>
+
+      <!-- Toalha de Mesa Estampada -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+        <div class="relative h-48 bg-gray-100">
+          <img id="img-toalha_mesa_estampada" src="img/toalha_1.jpeg" class="w-full h-48 object-cover">
+          <button onclick="mudarFoto('toalha_mesa_estampada', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-left"></i></button>
+          <button onclick="mudarFoto('toalha_mesa_estampada', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+          <div>
+            <h3 class="font-bold text-lg text-gray-900">Toalha de Mesa Estampada</h3>
+            <p class="text-xs text-gray-600 mt-1">Estampas exclusivas em tecido prático e lavável.</p>
+          </div>
+          <button onclick="enviarParaWhatsApp('Toalha de Mesa Estampada', 'toalha_mesa_estampada')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+            <i class="fab fa-whatsapp text-sm"></i> Pedir Esta Estampa
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= TECIDOS LISOS ================= -->
+  <section id="tecidos-lisos" class="py-12 bg-gray-100 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="border-b border-gray-300 pb-4 mb-8">
+        <h2 class="text-2xl md:text-3xl font-black text-gray-900 flex items-center gap-2">
+          <i class="fas fa-fill-drip text-brandRed"></i> Tecidos Lisos
+        </h2>
+        <p class="text-gray-600 text-sm mt-1">Navegue pelas cores disponíveis de cada material</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Tactel Liso -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+          <div class="relative h-48 bg-gray-100">
+            <img id="img-tactel_liso" src="img/tactel_liso-1.jpeg" class="w-full h-48 object-cover">
+            <button onclick="mudarFoto('tactel_liso', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-left"></i></button>
+            <button onclick="mudarFoto('tactel_liso', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-right"></i></button>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <h3 class="font-bold text-lg text-gray-900">Tactel Liso</h3>
+              <p class="text-xs text-gray-600 mt-1">Tecido leve, secagem rápida e alta variedade de tons.</p>
+            </div>
+            <button onclick="enviarParaWhatsApp('Tactel Liso', 'tactel_liso')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+              <i class="fab fa-whatsapp text-sm"></i> Pedir Esta Cor
+            </button>
+          </div>
+        </div>
+
+        <!-- Suede Liso -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+          <div class="relative h-48 bg-gray-100">
+            <img id="img-suede_liso" src="img/suede-1.jpeg" class="w-full h-48 object-cover">
+            <button onclick="mudarFoto('suede_liso', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-left"></i></button>
+            <button onclick="mudarFoto('suede_liso', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-right"></i></button>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <h3 class="font-bold text-lg text-gray-900">Suede Liso</h3>
+              <p class="text-xs text-gray-600 mt-1">Toque camurçado para linha pet de alto padrão.</p>
+            </div>
+            <button onclick="enviarParaWhatsApp('Suede Liso', 'suede_liso')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+              <i class="fab fa-whatsapp text-sm"></i> Pedir Esta Cor
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PLÁSTICOS & CRISTAIS ================= -->
+  <section id="plasticos" class="py-12 max-w-7xl mx-auto px-4">
+    <div class="border-b border-gray-200 pb-4 mb-8">
+      <h2 class="text-2xl md:text-3xl font-black text-gray-900 flex items-center gap-2">
+        <i class="fas fa-layer-group text-brandRed"></i> Plásticos, Cristais & Estrutura
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <!-- Bagum -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+        <div class="relative h-48 bg-gray-100">
+          <img id="img-bagum" src="img/bagum-1.jpeg" class="w-full h-48 object-cover">
+          <button onclick="mudarFoto('bagum', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-left"></i></button>
+          <button onclick="mudarFoto('bagum', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+          <div>
+            <h3 class="font-bold text-lg text-gray-900">Bagum</h3>
+            <p class="text-xs text-gray-600 mt-1">Plástico impermeável para fundo de caminhada.</p>
+          </div>
+          <button onclick="enviarParaWhatsApp('Bagum', 'bagum')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+            <i class="fab fa-whatsapp text-sm"></i> Pedir Esta Cor
+          </button>
+        </div>
+      </div>
+
+      <!-- Plástico Cristal (COM CARROSSEL DE ESPESSURAS / MODELOS) -->
+<div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+  <div class="relative h-48 bg-gray-100">
+    <img id="img-cristal" src="img/cristal-1.jpeg" class="w-full h-48 object-cover">
+    <button onclick="mudarFoto('cristal', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button onclick="mudarFoto('cristal', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+  <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+    <div>
+      <h3 class="font-bold text-lg text-gray-900">Plástico Cristal</h3>
+      <p class="text-xs text-gray-600 mt-1">Espessuras: <strong>0.10, 0.15, 0.20 e 0.30</strong>.</p>
+    </div>
+    <button onclick="enviarParaWhatsApp('Plástico Cristal (0.10 a 0.30)', 'cristal')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+      <i class="fab fa-whatsapp text-sm"></i> Consultar / Pedir
+    </button>
+  </div>
+</div>
+
+      <!-- TNT (COM CARROSSEL DE CORES/GRAMATURAS) -->
+<div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+  <div class="relative h-48 bg-gray-100">
+    <img id="img-tnt" src="img/tnt-1.jpeg" class="w-full h-48 object-cover">
+    <button onclick="mudarFoto('tnt', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button onclick="mudarFoto('tnt', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+  <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+    <div>
+      <h3 class="font-bold text-lg text-gray-900">TNT</h3>
+      <p class="text-xs text-gray-600 mt-1">Diversas gramaturas e cores para forros de caminhas e estofados.</p>
+    </div>
+    <button onclick="enviarParaWhatsApp('TNT', 'tnt')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+      <i class="fab fa-whatsapp text-sm"></i> Pedir Esta Cor / Gramatura
+    </button>
+  </div>
+</div>
+
+      <!-- Espuma PAC -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+        <div class="relative h-48 bg-gray-100">
+          <img id="img-pac" src="https://via.placeholder.com/400x300?text=Espuma+PAC" class="w-full h-48 object-cover">
+        </div>
+        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+          <div>
+            <h3 class="font-bold text-lg text-gray-900">Espuma PAC</h3>
+            <p class="text-xs text-gray-600 mt-1">Isolante e estruturador para bordas de caminhas.</p>
+          </div>
+          <button onclick="enviarParaWhatsApp('Espuma PAC', 'pac')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+            <i class="fab fa-whatsapp text-sm"></i> Orçar Espuma PAC
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= AVIAMENTOS & INSUMOS ================= -->
+  <section id="aviamentos" class="py-12 bg-gray-100 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="border-b border-gray-300 pb-4 mb-8">
+        <h2 class="text-2xl md:text-3xl font-black text-gray-900 flex items-center gap-2">
+          <i class="fas fa-cut text-brandRed"></i> Aviamentos & Insumos
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Fita CA -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+          <div class="relative h-48 bg-gray-100">
+            <img id="img-fitaca" src="img/fita-1.jpeg" class="w-full h-48 object-cover">
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <h3 class="font-bold text-lg text-gray-900">Fita CA</h3>
+              <p class="text-xs text-gray-600 mt-1">Larguras: <strong>25mm, 30mm, 40mm e 50mm</strong>.</p>
+            </div>
+            <button onclick="enviarParaWhatsApp('Fita CA (25, 30, 40 e 50mm)', 'fitaca')" class="w-full bg-brandRed hover:bg-red-700 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+              <i class="fab fa-whatsapp text-sm"></i> Consultar Larguras
+            </button>
+          </div>
+        </div>
+
+        <!-- Zíper -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+          <div class="relative h-48 bg-gray-100">
+            <img id="img-ziper" src="https://via.placeholder.com/400x300?text=Ziper" class="w-full h-48 object-cover">
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <h3 class="font-bold text-lg text-gray-900">Zíper</h3>
+              <p class="text-xs text-gray-600 mt-1">Zíperes em metro para capa de caminhadas.</p>
+            </div>
+            <button onclick="enviarParaWhatsApp('Zíper em Metro', 'ziper')" class="w-full bg-brandRed hover:bg-red-700 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+              <i class="fab fa-whatsapp text-sm"></i> Orçar Zíper
+            </button>
+          </div>
+        </div>
+
+        <!-- Cursor Preto Niquelado -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+          <div class="relative h-48 bg-gray-100">
+            <img id="img-cursor" src="img/cursor.jpg" class="w-full h-48 object-cover">
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <h3 class="font-bold text-lg text-gray-900">Cursor Preto Niquelado</h3>
+              <p class="text-xs text-gray-600 mt-1">Cursores reforçados e com excelente trava.</p>
+            </div>
+            <button onclick="enviarParaWhatsApp('Cursor Preto Niquelado', 'cursor')" class="w-full bg-brandRed hover:bg-red-700 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+              <i class="fab fa-whatsapp text-sm"></i> Orçar Cursor
+            </button>
+          </div>
+        </div>
+
+        <!-- Viés & Linha de Nylon (COM CARROSSEL) -->
+<div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+  <div class="relative h-48 bg-gray-100">
+    <img id="img-vies" src="img/vies-1.jpg" class="w-full h-48 object-cover">
+    <button onclick="mudarFoto('vies', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button onclick="mudarFoto('vies', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+  <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+    <div>
+      <h3 class="font-bold text-lg text-gray-900">Viés</h3>
+      <p class="text-xs text-gray-600 mt-1">Acabamentos fortes e cores variadas para costura industrial.</p>
+    </div>
+    <button onclick="enviarParaWhatsApp('Viés e Linha de Nylon', 'vies')" class="w-full bg-brandRed hover:bg-red-700 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+      <i class="fab fa-whatsapp text-sm"></i> Pedir Esta Cor / Modelo
+    </button>
+  </div>
+</div>
+
+        <!-- Fibra de Enchimento -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+          <div class="relative h-48 bg-gray-100">
+            <img id="img-fibra" src="img/fibra.jpeg" class="w-full h-48 object-cover">
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <h3 class="font-bold text-lg text-gray-900">Fibra de Enchimento</h3>
+              <p class="text-xs text-gray-600 mt-1">Fibra siliconada macia de alto rendimento.</p>
+            </div>
+            <button onclick="enviarParaWhatsApp('Fibra de Enchimento', 'fibra')" class="w-full bg-brandRed hover:bg-red-700 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+              <i class="fab fa-whatsapp text-sm"></i> Orçar Fibra
+            </button>
+          </div>
+        </div>
+
+      <!-- Cola Spray (COM VÍDEO COMPLETO SEM CORTAR) -->
+<div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+  <div class="relative h-48 bg-black flex items-center justify-center">
+    <video class="w-full h-full object-contain pointer-events-none" autoplay muted loop playsinline>
+      <source src="img/cola-spray.mp4" type="video/mp4">
+      Seu navegador não suporta a exibição deste vídeo.
+    </video>
+  </div>
+  <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+    <div>
+      <h3 class="font-bold text-lg text-gray-900">Cola Spray</h3>
+      <p class="text-xs text-gray-600 mt-1">Fixação rápida e prática para dublagem e estofamentos.</p>
+    </div>
+    <button onclick="enviarParaWhatsApp('Cola Spray', 'cola_spray')" class="w-full bg-brandRed hover:bg-red-700 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+      <i class="fab fa-whatsapp text-sm"></i> Orçar Cola Spray
+    </button>
+  </div>
+</div>
+      <!-- Linha de Nylon (COM CARROSSEL) -->
+<div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+  <div class="relative h-48 bg-gray-100">
+    <img id="img-linha" src="img/linha-1.jpeg" class="w-full h-48 object-cover">
+    <button onclick="mudarFoto('linha', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button onclick="mudarFoto('linha', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+  <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+    <div>
+      <h3 class="font-bold text-lg text-gray-900">Linha de Nylon</h3>
+      <p class="text-xs text-gray-600 mt-1">Alta resistência para costura industrial e acabamento de caminhas.</p>
+    </div>
+    <button onclick="enviarParaWhatsApp('Linha de Nylon', 'linha')" class="w-full bg-brandRed hover:bg-red-700 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+      <i class="fab fa-whatsapp text-sm"></i> Pedir Esta Cor / Modelo
+    </button>
+  </div>
+</div>
+
+<!-- Velcro (COM CARROSSEL) -->
+<div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+  <div class="relative h-48 bg-gray-100">
+    <img id="img-velcro" src="img/velcro-1.jpg" class="w-full h-48 object-cover">
+     <button onclick="mudarFoto('velcro', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button onclick="mudarFoto('velcro', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+  <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+    <div>
+      <h3 class="font-bold text-lg text-gray-900">Velcro</h3>
+      <p class="text-xs text-gray-600 mt-1">Fechos adesivos/costuráveis de alta aderência em diversas larguras e cores.</p>
+    </div>
+    <button onclick="enviarParaWhatsApp('Velcro', 'velcro')" class="w-full bg-brandRed hover:bg-red-700 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+      <i class="fab fa-whatsapp text-sm"></i> Pedir Este Modelo
+    </button>
+  </div>
+</div>
+      <!-- Tesouras Profissionais -->
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+        <div class="relative h-48 bg-gray-100">
+          <img id="img-tesoura" src="img/tesoura.jpg" class="w-full h-48 object-cover">
+        </div>
+      <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+      <div>
+        <h3 class="font-bold text-lg text-gray-900">Tesouras Profissionais</h3>
+        <p class="text-xs text-gray-600 mt-1">Corte preciso e resistente para tecidos e plásticos.</p>
+      </div>
+        <button onclick="enviarParaWhatsApp('Tesouras Profissionais', 'tesoura')" class="w-full bg-brandRed hover:bg-red-700 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+        <i class="fab fa-whatsapp text-sm"></i> Orçar Tesouras
+    </button>
+  </div>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer id="contato" class="bg-brandDark text-gray-300 py-12 px-4">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <div>
+        <h4 class="text-white font-bold text-lg mb-3">FRAN PLAST</h4>
+        <p class="text-sm text-gray-400">Atendendo com excelência há 12 anos os fabricantes pet e ateliês de todo o Brasil.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-bold text-lg mb-3">Atendimento</h4>
+        <p class="text-sm mb-1"><i class="fab fa-whatsapp text-emerald-400 mr-2"></i> WhatsApp: (11) 96505-0312</p>
+        <p class="text-sm mb-1"><i class="fas fa-phone text-gray-400 mr-2"></i> Fixo: (11) 3275-2269</p>
+        <p class="text-sm"><i class="fas fa-map-marker-alt text-brandRed mr-2"></i> R. Carneiro Leão, 87 - Brás, São Paulo - SP</p>
+      </div>
+      <div>
+        <h4 class="text-white font-bold text-lg mb-3">Redes Sociais</h4>
+        <a href="https://www.instagram.com/fran_plast/" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:opacity-90 transition">
+          <i class="fab fa-instagram text-lg"></i> Siga no Instagram
+        </a>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 pt-6 text-center text-xs text-gray-500">
+      &copy; Fran Plast - Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <!-- ================= BOTÃO WHATSAPP FIXO ================= -->
+  <a href="https://wa.me/5511965050312?text=Olá!%20Vim%20pelo%20site." target="_blank" class="fixed bottom-5 right-5 bg-emerald-500 text-white p-4 rounded-full shadow-2xl hover:bg-emerald-600 transition-all z-50 flex items-center justify-center">
+    <i class="fab fa-whatsapp text-3xl"></i>
+  </a>
+
+  <!-- Vínculo com o arquivo JavaScript externo -->
+  <script src="script.js"></script>
+</body>
+</html>

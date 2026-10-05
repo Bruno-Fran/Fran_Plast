@@ -1,0 +1,19 @@
+/* Rolagem suave ao clicar nos links do menu */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Configuração de cores personalizadas da Fran Plast */
+:root {
+  --brand-red: #D32F2F;
+  --brand-dark: #1E1E1E;
+}
+
+/* Animações e ajustes para fotos */
+.group:hover img {
+  transform: scale(1.02);
+}
+
+img {
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
