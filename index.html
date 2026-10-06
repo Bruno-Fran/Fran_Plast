@@ -486,7 +486,7 @@
       <!-- Espuma PAC -->
       <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
         <div class="relative h-48 bg-gray-100">
-          <img id="img-pac" src="https://via.placeholder.com/400x300?text=Espuma+PAC" class="w-full h-48 object-cover cursor-pointer" onclick="abrirModalProduto('Espuma PAC Estruturada', 'pac', 'Estruturador firme e leve para dar formato a bordas e casinhas pet.', 'Placa de Espuma PAC')">
+          <img id="img-pac" src="img/espuma.jpeg" class="w-full h-48 object-cover cursor-pointer" onclick="abrirModalProduto('Espuma PAC Estruturada', 'pac', 'Estruturador firme e leve para dar formato a bordas e casinhas pet.', 'Placa de Espuma PAC')">
         </div>
         <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
           <div>
@@ -529,37 +529,51 @@
           </div>
         </div>
 
-        <!-- Zíper -->
-        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
-          <div class="relative h-48 bg-gray-100">
-            <img id="img-ziper" src="https://via.placeholder.com/400x300?text=Ziper" class="w-full h-48 object-cover cursor-pointer" onclick="abrirModalProduto('Zíper em Metro', 'ziper', 'Zíper contínuo reforçado para capas removíveis de camas.', 'Vendido por Metro')">
-          </div>
-          <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
-            <div>
-              <h3 class="font-bold text-lg text-gray-900 cursor-pointer" onclick="abrirModalProduto('Zíper em Metro', 'ziper', 'Zíper contínuo reforçado para capas removíveis de camas.', 'Vendido por Metro')">Zíper</h3>
-              <p class="text-xs text-gray-600 mt-1">Zíperes em metro para capa de caminhadas.</p>
-            </div>
-            <button onclick="enviarParaWhatsApp('Zíper em Metro', 'ziper')" class="w-full bg-brandRed hover:bg-red-700 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
-              <i class="fab fa-whatsapp text-sm"></i> Orçar Zíper
-            </button>
-          </div>
-        </div>
+        <!-- Card Único de Zíper -->
+<div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+  <div class="relative h-48 bg-gray-100">
+    <img id="img-ziper" src="img/ziper-1.jpeg" class="w-full h-48 object-cover cursor-pointer" onclick="abrirModalProduto('Zíper em Metro (Nylon)', 'ziper', 'Zíper contínuo em metro de alta qualidade para capas de caminhas pet, almofadas e estofados.', 'Nylon nº 5 e nº 6 / Várias Cores')">
+    <button onclick="event.stopPropagation(); mudarFoto('ziper', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-left"></i></button>
+    <button onclick="event.stopPropagation(); mudarFoto('ziper', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center"><i class="fas fa-chevron-right"></i></button>
+  </div>
+  <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+    <div>
+      <h3 class="font-bold text-lg text-gray-900 cursor-pointer" onclick="abrirModalProduto('Zíper em Metro (Nylon)', 'ziper', 'Zíper contínuo em metro de alta qualidade para capas de caminhas pet, almofadas e estofados.', 'Nylon nº 5 e nº 6 / Várias Cores')">Zíper em Metro</h3>
+      <p class="text-xs text-gray-600 mt-1">Zíperes em metro para capas removíveis e capas pet.</p>
+    </div>
+    <button onclick="enviarParaWhatsApp('Zíper em Metro', 'ziper')" class="w-full bg-brandRed hover:bg-red-700 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+      <i class="fab fa-whatsapp text-sm"></i> Orçar Zíper
+    </button>
+  </div>
+</div>
 
-        <!-- Cursor Preto Niquelado -->
-        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
-          <div class="relative h-48 bg-gray-100">
-            <img id="img-cursor" src="img/cursor.jpg" class="w-full h-48 object-cover cursor-pointer" onclick="abrirModalProduto('Cursor Preto Niquelado', 'cursor', 'Cursor com excelente trava para zíperes nº 5/6.', 'Metal Preto Niquelado')">
-          </div>
-          <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
-            <div>
-              <h3 class="font-bold text-lg text-gray-900 cursor-pointer" onclick="abrirModalProduto('Cursor Preto Niquelado', 'cursor', 'Cursor com excelente trava para zíperes nº 5/6.', 'Metal Preto Niquelado')">Cursor Preto Niquelado</h3>
-              <p class="text-xs text-gray-600 mt-1">Cursores reforçados e com excelente trava.</p>
-            </div>
-            <button onclick="enviarParaWhatsApp('Cursor Preto Niquelado', 'cursor')" class="w-full bg-brandRed hover:bg-red-700 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
-              <i class="fab fa-whatsapp text-sm"></i> Orçar Cursor
-            </button>
-          </div>
-        </div>
+        <!-- Card de Cursores (Preto e Niquelado) com Setas de Troca de Foto -->
+<div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+  <div class="relative h-48 bg-gray-100">
+    <!-- Foto com Clique para Abrir Ampliada -->
+    <img id="img-cursor" src="img/cursor-1.jpg" class="w-full h-48 object-cover cursor-pointer" onclick="abrirModalProduto('Cursores Preto e Niquelado', 'cursor')">
+    
+    <!-- Seta Esquerda -->
+    <button onclick="event.stopPropagation(); mudarFoto('cursor', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center z-10 cursor-pointer">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    
+    <!-- Seta Direita -->
+    <button onclick="event.stopPropagation(); mudarFoto('cursor', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center z-10 cursor-pointer">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+  
+  <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+    <div>
+      <h3 class="font-bold text-lg text-gray-900 cursor-pointer" onclick="abrirModalProduto('Cursores Preto e Niquelado', 'cursor')">Cursores Preto & Niquelado</h3>
+      <p class="text-xs text-gray-600 mt-1">Cursores reforçados nº 5 e nº 6 nos acabamentos Preto e Niquelado para zíperes em metro.</p>
+    </div>
+    <button onclick="enviarParaWhatsApp('Cursores Preto e Niquelado', 'cursor')" class="w-full bg-brandRed hover:bg-red-700 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+      <i class="fab fa-whatsapp text-sm"></i> Orçar Cursores
+    </button>
+  </div>
+</div>
 
         <!-- Viés -->
         <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
@@ -648,23 +662,33 @@
             </button>
           </div>
         </div>
-
-        <!-- Tesouras Profissionais -->
-        <div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
-          <div class="relative h-48 bg-gray-100">
-            <img id="img-tesoura" src="img/tesoura.jpg" class="w-full h-48 object-cover cursor-pointer" onclick="abrirModalProduto('Tesoura de Alfaiate', 'tesoura', 'Tesoura em aço para corte preciso de tecidos e plásticos.', 'Aço Forjado')">
-          </div>
-          <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
-            <div>
-              <h3 class="font-bold text-lg text-gray-900 cursor-pointer" onclick="abrirModalProduto('Tesoura de Alfaiate', 'tesoura', 'Tesoura em aço para corte preciso de tecidos e plásticos.', 'Aço Forjado')">Tesouras Profissionais</h3>
-              <p class="text-xs text-gray-600 mt-1">Corte preciso e resistente para tecidos e plásticos.</p>
-            </div>
-            <button onclick="enviarParaWhatsApp('Tesouras Profissionais', 'tesoura')" class="w-full bg-brandRed hover:bg-red-700 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
-              <i class="fab fa-whatsapp text-sm"></i> Orçar Tesouras
-            </button>
-          </div>
-        </div>
-
+<!-- Card de Tesouras Profissionais com Setas de Troca de Foto -->
+<div class="product-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+  <div class="relative h-48 bg-gray-100">
+    <!-- Foto com Clique para Abrir Ampliada -->
+    <img id="img-tesoura" src="img/tesoura-1.jpeg" class="w-full h-48 object-cover cursor-pointer" onclick="abrirModalProduto('Tesouras Profissionais', 'tesoura')">
+    
+    <!-- Seta Esquerda -->
+    <button onclick="event.stopPropagation(); mudarFoto('tesoura', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center z-10 cursor-pointer">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    
+    <!-- Seta Direita -->
+    <button onclick="event.stopPropagation(); mudarFoto('tesoura', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/90 text-white w-8 h-8 rounded-full flex items-center justify-center z-10 cursor-pointer">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+  
+  <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+    <div>
+      <h3 class="font-bold text-lg text-gray-900 cursor-pointer" onclick="abrirModalProduto('Tesouras Profissionais', 'tesoura')">Tesouras Profissionais</h3>
+      <p class="text-xs text-gray-600 mt-1">Corte preciso e resistente para tecidos, plásticos e aviamentos.</p>
+    </div>
+    <button onclick="enviarParaWhatsApp('Tesouras Profissionais', 'tesoura')" class="w-full bg-brandRed hover:bg-red-700 text-white font-bold py-2 rounded-lg text-center text-xs flex items-center justify-center gap-2">
+      <i class="fab fa-whatsapp text-sm"></i> Orçar Tesouras
+    </button>
+  </div>
+</div>
       </div>
     </div>
   </section>
@@ -699,36 +723,26 @@
     <i class="fab fa-whatsapp text-3xl"></i>
   </a>
 
-  <!-- ================= JANELA MODAL DE DETALHES DO PRODUTO ================= -->
-  <div id="modalProduto" class="modal-overlay">
-    <div class="modal-content p-6">
-      <button onclick="fecharModalProduto()" class="close-btn">&times;</button>
+  <!-- JANELA MODAL DE FOTO AMPLIADA (SOMENTE IMAGEM) -->
+<div id="modalProduto" class="modal-overlay" onclick="fecharModalProduto()">
+  <div class="modal-content !max-w-4xl !bg-transparent !shadow-none p-2 relative flex items-center justify-center" onclick="event.stopPropagation()">
+    <!-- Botão Fechar -->
+    <button onclick="fecharModalProduto()" class="close-btn !top-2 !right-2 !bg-black/70 !text-white hover:!bg-black">&times;</button>
+    
+    <!-- Container da Imagem em Destaque -->
+    <div class="relative w-full flex items-center justify-center">
+      <img id="modalImagem" src="" alt="Foto Ampliada Fran Plast" class="max-h-[85vh] max-w-full object-contain rounded-lg shadow-2xl">
       
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-        <!-- Imagem Ampliada -->
-        <div class="bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center p-4">
-          <img id="modalImagem" src="" alt="Produto Fran Plast" class="max-h-80 object-contain rounded">
-        </div>
-
-        <!-- Informações do Produto -->
-        <div class="space-y-4">
-          <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Fran Plast - Brás</span>
-          <h2 id="modalTitulo" class="text-2xl font-bold text-gray-800"></h2>
-          <p id="modalDescricao" class="text-gray-600 text-sm leading-relaxed"></p>
-          
-          <div class="border-t pt-3 border-gray-200">
-            <p class="text-xs font-semibold text-gray-500 uppercase">Especificações / Composição:</p>
-            <p id="modalComposicao" class="text-sm text-gray-700 font-medium"></p>
-          </div>
-
-          <!-- Botão Principal para Pedir no WhatsApp -->
-          <a id="modalBtnWhatsapp" href="#" target="_blank" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-6 rounded-lg flex items-center justify-center gap-2 shadow-lg transition text-center">
-            <i class="fab fa-whatsapp text-xl"></i> Pedir Este Produto no WhatsApp
-          </a>
-        </div>
-      </div>
+      <!-- Setas para alternar foto -->
+      <button onclick="mudarFotoModal(-1)" class="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black text-white w-12 h-12 rounded-full flex items-center justify-center shadow-2xl transition">
+        <i class="fas fa-chevron-left text-xl"></i>
+      </button>
+      <button onclick="mudarFotoModal(1)" class="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black text-white w-12 h-12 rounded-full flex items-center justify-center shadow-2xl transition">
+        <i class="fas fa-chevron-right text-xl"></i>
+      </button>
     </div>
   </div>
+</div>
 
   <!-- Vínculo com o arquivo JavaScript externo -->
   <script src="script.js"></script>

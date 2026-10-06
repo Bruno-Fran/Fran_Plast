@@ -210,9 +210,29 @@ const bancoDeFotos = {
     'img/linha-1.jpeg',
     'img/linha-2.jpeg',
   ],
+  ziper: [
+    'img/ziper-1.jpeg',
+    'img/ziper-2.jpeg',
+    'img/ziper-3.jpeg',
+    'img/ziper-4.jpeg',
+    'img/ziper-5.jpeg',
+    'img/ziper-6.jpeg',
+    'img/ziper-7.jpeg',
+    'img/ziper-8.jpeg',
+    'img/ziper-9.jpeg',
+  ],
   velcro: [
     'img/velcro-1.jpg',
     'img/velcro-2.jpg',
+  ],
+  tesoura: [
+    'img/tesoura-1.jpeg',
+    'img/tesoura-2.jpeg',
+    'img/tesoura-3.jpeg',
+  ],
+  cursor: [
+    'img/cursor-1.jpg',
+    'img/cursor-2.jpeg',
   ]
 };
 
@@ -258,37 +278,31 @@ function enviarParaWhatsApp(nomeProduto, idElementoImg) {
   window.open(linkFinal, '_blank');
 }
 
-// ================= FUNÇÃO: MODAL DE DETALHES DO PRODUTO =================
-function abrirModalProduto(titulo, idElementoImg, descricao, composicao) {
+// Variável global para guardar o ID do produto atualmente aberto na modal
+let produtoModalAtual = '';
+
+// ================= FUNÇÃO: ABRIR APENAS A FOTO NA MODAL =================
+function abrirModalProduto(titulo, idElementoImg) {
+  produtoModalAtual = idElementoImg;
+
   const imgElement = document.getElementById(`img-${idElementoImg}`);
   const urlFoto = imgElement ? imgElement.src : '';
 
-  document.getElementById('modalTitulo').innerText = titulo;
   document.getElementById('modalImagem').src = urlFoto;
-  document.getElementById('modalDescricao').innerText = descricao;
-  document.getElementById('modalComposicao').innerText = composicao || "Consulte opções com nossos atendentes.";
-  
-  let nomeArquivo = urlFoto.substring(urlFoto.lastIndexOf('/') + 1);
-  const textoMensagem = `Olá! Vim pelo site da Fran Plast.\n\n` +
-                        `Gostaria de solicitar orçamento para:\n` +
-                        `📌 *Produto:* ${titulo}\n` +
-                        `🎨 *Modelo da Foto:* ${nomeArquivo}`;
-
-  const numeroWhatsApp = "5511965050312";
-  document.getElementById('modalBtnWhatsapp').href = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(textoMensagem)}`;
-
   document.getElementById('modalProduto').classList.add('active');
+}
+
+// Alternar foto de dentro da janela
+function mudarFotoModal(direcao) {
+  if (!produtoModalAtual || !bancoDeFotos[produtoModalAtual]) return;
+
+  mudarFoto(produtoModalAtual, direcao);
+  const novaFoto = document.getElementById(`img-${produtoModalAtual}`).src;
+  document.getElementById('modalImagem').src = novaFoto;
 }
 
 function fecharModalProduto() {
   document.getElementById('modalProduto').classList.remove('active');
-}
-
-window.onclick = function(event) {
-  const modal = document.getElementById('modalProduto');
-  if (event.target === modal) {
-    fecharModalProduto();
-  }
 }
 
 // ================= FUNÇÃO: BARRA DE BUSCA EM TEMPO REAL =================
