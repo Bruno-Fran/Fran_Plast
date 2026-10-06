@@ -226,6 +226,8 @@ const bancoDeFotos = {
 // Controle de índices atuais das fotos
 const indicesAtual = {};
 
+
+
 // ================= FUNÇÃO: MUDAR FOTO AO CLICAR NAS SETAS =================
 function mudarFoto(idProduto, direcao) {
   if (!bancoDeFotos[idProduto]) return;
@@ -266,4 +268,18 @@ function enviarParaWhatsApp(nomeProduto, idElementoImg) {
   const linkFinal = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(textoMensagem)}`;
 
   window.open(linkFinal, '_blank');
+}
+// Função para filtrar produtos na busca em tempo real
+function filtrarProdutos() {
+  const termo = document.getElementById('inputBusca').value.toLowerCase();
+  const cards = document.querySelectorAll('.grid > div');
+
+  cards.forEach(card => {
+    const texto = card.innerText.toLowerCase();
+    if (texto.includes(termo)) {
+      card.style.display = "";
+    } else {
+      card.style.display = "none";
+    }
+  });
 }
