@@ -260,22 +260,28 @@ function mudarFoto(idProduto, direcao) {
   }
 }
 
-// ================= FUNÇÃO: ENVIAR PEDIDO AO WHATSAPP =================
-function enviarParaWhatsApp(nomeProduto, idElementoImg) {
+// ================= FUNÇÃO: GERAR LINK DO WHATSAPP COM LINK DIRETO DA IMAGEM =================
+function enviarParaWhatsApp(tituloProduto, idElementoImg) {
   const imgElement = document.getElementById(`img-${idElementoImg}`);
-  let urlFoto = imgElement ? imgElement.src : '';
-  let nomeArquivo = urlFoto.substring(urlFoto.lastIndexOf('/') + 1);
+  
+  // Pega o URL completo da imagem exibida na tela no momento
+  const urlFotoCompleta = imgElement ? imgElement.src : '';
+  
+  // Extrai o nome do arquivo (ex: tricoline-estampado-2.jpg)
+  const nomeArquivo = urlFotoCompleta.substring(urlFotoCompleta.lastIndexOf('/') + 1);
 
-  const textoMensagem = `Olá! Vim pelo site da Fran Plast.\n\n` +
-                        `Gostaria de fazer um orçamento/pedido do produto:\n` +
-                        `📌 *Produto:* ${nomeProduto}\n` +
-                        `🎨 *Modelo/Foto:* ${nomeArquivo}\n\n` +
-                        `Poderia me informar o valor e disponibilidade em estoque?`;
+  const textoMensagem = 
+`Olá! Vim pelo site da Fran Plast.
 
-  const numeroWhatsApp = "5511965050312";
-  const linkFinal = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(textoMensagem)}`;
+Gostaria de solicitar um orçamento para:
+📌 *Produto:* ${tituloProduto}
+🎨 *Modelo/Foto Selecionada:* ${nomeArquivo}
+🖼️ *Link da Foto:* ${urlFotoCompleta}`;
 
-  window.open(linkFinal, '_blank');
+  const numeroWhatsApp = "5511965050312"; // Número Fran Plast
+  const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(textoMensagem)}`;
+
+  window.open(urlWhatsApp, '_blank');
 }
 
 // Variável global para guardar o ID do produto atualmente aberto na modal
