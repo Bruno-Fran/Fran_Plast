@@ -37,7 +37,6 @@ const bancoDeFotos = {
     'img/gorgurinho-10.jpeg',
     'img/gorgurinho-11.jpeg',
     'img/gorgurinho-12.jpeg',
-    
   ],
   corino_estampado: [
     'img/corino-1.jpeg',
@@ -65,10 +64,8 @@ const bancoDeFotos = {
     'img/oxford-10.jpeg',
     'img/oxford-11.jpeg',
     'img/oxford-12.jpeg',
-
   ],
   tactel_estampado: [
-    
     'img/tactel-1.jpeg',
     'img/tactel-2.jpeg',
     'img/tactel-3.jpeg',
@@ -110,7 +107,6 @@ const bancoDeFotos = {
     'img/sherpa-4.jpeg',
     'img/sherpa-5.jpeg',
     'img/sherpa-6.jpeg',
-
   ],
   dijon_estampado: [
     'img/dijon-1.jpeg',
@@ -143,9 +139,6 @@ const bancoDeFotos = {
     'img/toalha_6.jpeg',
     'img/toalha_7.jpeg',
     'img/toalha_8.jpeg',
-  ],
-  oxford_liso: [
-    'https://via.placeholder.com/400x300?text=Oxford+Liso+Cor+1'
   ],
   tactel_liso: [
     'img/tactel_liso-1.jpeg',
@@ -189,7 +182,7 @@ const bancoDeFotos = {
     'img/cristal-3.jpeg',
     'img/cristal-4.jpeg',
   ],
-  tnt:[
+  tnt: [
     'img/tnt-1.jpeg',
     'img/tnt-2.jpeg',
     'img/tnt-3.jpeg',
@@ -223,10 +216,7 @@ const bancoDeFotos = {
   ]
 };
 
-// Controle de índices atuais das fotos
 const indicesAtual = {};
-
-
 
 // ================= FUNÇÃO: MUDAR FOTO AO CLICAR NAS SETAS =================
 function mudarFoto(idProduto, direcao) {
@@ -254,8 +244,6 @@ function mudarFoto(idProduto, direcao) {
 function enviarParaWhatsApp(nomeProduto, idElementoImg) {
   const imgElement = document.getElementById(`img-${idElementoImg}`);
   let urlFoto = imgElement ? imgElement.src : '';
-  
-  // Pega o nome do arquivo da imagem (ex: tricoline-1.jpg)
   let nomeArquivo = urlFoto.substring(urlFoto.lastIndexOf('/') + 1);
 
   const textoMensagem = `Olá! Vim pelo site da Fran Plast.\n\n` +
@@ -269,10 +257,44 @@ function enviarParaWhatsApp(nomeProduto, idElementoImg) {
 
   window.open(linkFinal, '_blank');
 }
-// Função para filtrar produtos na busca em tempo real
+
+// ================= FUNÇÃO: MODAL DE DETALHES DO PRODUTO =================
+function abrirModalProduto(titulo, idElementoImg, descricao, composicao) {
+  const imgElement = document.getElementById(`img-${idElementoImg}`);
+  const urlFoto = imgElement ? imgElement.src : '';
+
+  document.getElementById('modalTitulo').innerText = titulo;
+  document.getElementById('modalImagem').src = urlFoto;
+  document.getElementById('modalDescricao').innerText = descricao;
+  document.getElementById('modalComposicao').innerText = composicao || "Consulte opções com nossos atendentes.";
+  
+  let nomeArquivo = urlFoto.substring(urlFoto.lastIndexOf('/') + 1);
+  const textoMensagem = `Olá! Vim pelo site da Fran Plast.\n\n` +
+                        `Gostaria de solicitar orçamento para:\n` +
+                        `📌 *Produto:* ${titulo}\n` +
+                        `🎨 *Modelo da Foto:* ${nomeArquivo}`;
+
+  const numeroWhatsApp = "5511965050312";
+  document.getElementById('modalBtnWhatsapp').href = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(textoMensagem)}`;
+
+  document.getElementById('modalProduto').classList.add('active');
+}
+
+function fecharModalProduto() {
+  document.getElementById('modalProduto').classList.remove('active');
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById('modalProduto');
+  if (event.target === modal) {
+    fecharModalProduto();
+  }
+}
+
+// ================= FUNÇÃO: BARRA DE BUSCA EM TEMPO REAL =================
 function filtrarProdutos() {
   const termo = document.getElementById('inputBusca').value.toLowerCase();
-  const cards = document.querySelectorAll('.grid > div');
+  const cards = document.querySelectorAll('.product-card');
 
   cards.forEach(card => {
     const texto = card.innerText.toLowerCase();
