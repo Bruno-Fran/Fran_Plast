@@ -42,73 +42,101 @@
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased">
 
-  <!-- TOP BAR INFORMATIVA -->
-<div class="top-bar hidden md:block">
-  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
-    <div>
-      <span><i class="fas fa-map-marker-alt text-yellow-400 mr-1"></i> R. Carneiro Leão, 87 - Brás, São Paulo - SP</span>
-      <span class="ml-6"><i class="fas fa-phone text-yellow-400 mr-1"></i> (11) 3275-2269</span>
+  <!-- ================= HEADER ================= -->
+  <header class="sticky top-0 z-40 bg-white shadow-sm border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
+      
+      <!-- LOGO -->
+      <a href="#" class="flex items-center">
+        <img src="img/img_fran.png" alt="Fran Plast Logo" class="h-14 md:h-16 object-contain">
+      </a>
+
+      <nav class="hidden md:flex gap-6 font-semibold text-gray-700 text-sm">
+        <a href="#inicio" class="hover:text-brandRed transition">Início</a>
+        <a href="#tecidos-estampados" class="hover:text-brandRed transition">Tecidos Estampados</a>
+        <a href="#tecidos-lisos" class="hover:text-brandRed transition">Tecidos Lisos</a>
+        <a href="#plasticos" class="hover:text-brandRed transition">Plásticos</a>
+        <a href="#aviamentos" class="hover:text-brandRed transition">Aviamentos & Insumos</a>
+        <a href="#contato" class="hover:text-brandRed transition">Contato</a>
+      </nav>
+
+      <a href="https://wa.me/5511965050312?text=Olá!%20Vim%20pelo%20site%20da%20Fran%20Plast" 
+         target="_blank" 
+         class="hidden md:inline-flex bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-4 py-2 rounded-lg transition text-sm items-center gap-2 shadow-sm">
+        <i class="fab fa-whatsapp text-lg"></i> Pedir pelo WhatsApp
+      </a>
+
+      <button id="menu-btn" class="md:hidden text-gray-800 text-2xl focus:outline-none" aria-label="Abrir Menu">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
-    <div>
-      <a href="https://wa.me/5511965050312" target="_blank" class="text-white hover:text-yellow-400 font-bold"><i class="fab fa-whatsapp text-emerald-400 mr-1"></i> WhatsApp: (11) 96505-0312</a>
-    </div>
+  </header>
+
+  <!-- MENU MOBILE -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 py-3 space-y-2 font-semibold text-gray-700 text-sm">
+    <a href="#inicio" class="block hover:text-brandRed">Início</a>
+    <a href="#tecidos-estampados" class="block hover:text-brandRed">Tecidos Estampados</a>
+    <a href="#tecidos-lisos" class="block hover:text-brandRed">Tecidos Lisos</a>
+    <a href="#plasticos" class="block hover:text-brandRed">Plásticos</a>
+    <a href="#aviamentos" class="block hover:text-brandRed">Aviamentos & Insumos</a>
+    <a href="#contato" class="block hover:text-brandRed">Contato</a>
   </div>
-</div>
 
-<!-- HEADER ESTILO PLAS BRÁS -->
-<header class="main-header sticky top-0 z-40 py-3 shadow-md">
-  <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
-    
-    <!-- Logo -->
-    <a href="#" class="flex items-center">
-      <img src="img/img_fran.png" alt="Fran Plast Logo" class="h-14 object-contain">
-    </a>
-
-    <!-- Barra de Busca Central -->
-    <div class="w-full md:w-1/2">
-      <div class="relative">
-        <input 
-          type="text" 
-          id="inputBusca" 
-          onkeyup="filtrarProdutos()" 
-          placeholder="O que você procura hoje? (ex: Bagun, Tricoline, Zíper)..." 
-          class="w-full pl-4 pr-10 py-2.5 rounded-full border-2 border-red-700 focus:outline-none text-sm shadow-inner"
-        />
-        <button class="absolute right-3 top-1/2 -translate-y-1/2 text-red-700">
-          <i class="fas fa-search text-lg"></i>
-        </button>
+  <!-- ================= HERO ================= -->
+  <section id="inicio" class="py-10 md:py-16 bg-gradient-to-br from-brandDark via-gray-900 to-black text-white px-4 overflow-hidden">
+    <div class="max-w-full px-6 md:px-12 mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+      
+      <!-- LADO ESQUERDO: LOGO -->
+      <div class="flex-1 flex justify-center md:justify-start">
+        <img src="img/img_fran.png" alt="Fran Plast Logo" class="max-h-64 md:max-h-80 object-contain drop-shadow-2xl">
       </div>
+
+      <!-- CENTRO: DESCRIÇÃO E BOTÕES -->
+      <div class="flex-[1.5] text-center space-y-5">
+        <div>
+          <span class="inline-block bg-brandRed text-white text-xs md:text-sm px-4 py-1 rounded-full uppercase tracking-wider font-bold">
+            Há 12 Anos no Mercado • Brás - SP
+          </span>
+        </div>
+        <h1 class="text-2xl md:text-4xl font-black leading-tight">
+          Catálogo Completo para Fabricantes de Camas & Ateliês Pet
+        </h1>
+        <p class="text-gray-300 text-sm md:text-base max-w-xl mx-auto">
+          Navegue pelas fotos dos nossos produtos, clique para ampliar e solicite o orçamento da estampa ou cor desejada diretamente no WhatsApp.
+        </p>
+        <div class="pt-2 flex flex-col sm:flex-row justify-center gap-4">
+          <a href="https://wa.me/5511965050312?text=Olá!%20Gostaria%20de%20consultar%20preços%20e%20estoque." 
+             target="_blank"
+             class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-5 rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-sm md:text-base">
+            <i class="fab fa-whatsapp text-xl"></i> Falar com Atendente
+          </a>
+          <a href="https://www.instagram.com/fran_plast/" target="_blank" class="bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 px-5 rounded-xl transition flex items-center justify-center gap-2 text-sm md:text-base">
+            <i class="fab fa-instagram text-xl"></i> Instagram @fran_plast
+          </a>
+        </div>
+      </div>
+
+      <!-- LADO DIREITO: MASCOTE -->
+      <div class="flex-1 flex justify-center md:justify-end md:mr-8 lg:-mr-16">
+        <img src="img/mascote_bruno.png" alt="Mascote Fran Plast" class="max-h-64 md:max-h-80 object-contain drop-shadow-2xl">
+      </div>
+
     </div>
+  </section>
 
-    <!-- Botão WhatsApp Destaque -->
-    <a href="https://wa.me/5511965050312?text=Olá!%20Vim%20pelo%20site." target="_blank" class="bg-red-700 hover:bg-red-800 text-white font-bold px-5 py-2.5 rounded-full text-sm flex items-center gap-2 shadow-md">
-      <i class="fab fa-whatsapp text-lg"></i> Atendimento Rápido
-    </a>
-  </div>
-</header>
-
-<!-- BANNER PROMOCIONAL TIPO BRAZ LÉO -->
-<section class="max-w-7xl mx-auto px-4 my-6">
-  <div class="banner-orcamento rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-    <div class="space-y-2">
-      <span class="bg-yellow-400 text-black font-black text-xs px-3 py-1 rounded-md uppercase">Atacado & Varejo no Brás</span>
-      <h1 class="text-2xl md:text-4xl font-extrabold tracking-tight">PRECISA DE UM ORÇAMENTO RÁPIDO?</h1>
-      <p class="text-white/90 text-sm md:text-base">Fornecemos tecidos, plásticos e aviamentos direto para sua fábrica ou ateliê pet.</p>
+  <!-- Barra de Busca Rápida -->
+  <div class="max-w-md mx-auto px-4 my-8">
+    <div class="relative flex items-center">
+      <input 
+        type="text" 
+        id="inputBusca" 
+        onkeyup="filtrarProdutos()" 
+        placeholder="🔍 Pesquisar produto (ex: Bagun, Gorgurão, Zíper)..." 
+        class="w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-brandRed text-sm"
+      />
     </div>
-    <a href="https://wa.me/5511965050312?text=Olá!%20Gostaria%20de%20um%20orçamento%20rápido." target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white font-black px-8 py-4 rounded-xl text-lg shadow-2xl flex items-center gap-3 transition transform hover:scale-105">
-      <i class="fab fa-whatsapp text-2xl"></i> Fazer Orçamento
-    </a>
   </div>
-</section>
 
-<!-- NAVEGAÇÃO DE FILTROS POR CATEGORIA -->
-<div class="max-w-7xl mx-auto px-4 mb-8 flex flex-wrap gap-2 justify-center">
-  <button onclick="filtrarCategoria('todos')" class="btn-categoria active px-5 py-2 rounded-full text-xs uppercase">Todos os Produtos</button>
-  <button onclick="filtrarCategoria('tecidos-estampados')" class="btn-categoria px-5 py-2 rounded-full text-xs uppercase">Tecidos Estampados</button>
-  <button onclick="filtrarCategoria('tecidos-lisos')" class="btn-categoria px-5 py-2 rounded-full text-xs uppercase">Tecidos Lisos</button>
-  <button onclick="filtrarCategoria('plasticos')" class="btn-categoria px-5 py-2 rounded-full text-xs uppercase">Plásticos & Bagum</button>
-  <button onclick="filtrarCategoria('aviamentos')" class="btn-categoria px-5 py-2 rounded-full text-xs uppercase">Aviamentos & Insumos</button>
-</div>
   <!-- ================= TECIDOS ESTAMPADOS ================= -->
   <section id="tecidos-estampados" class="py-8 max-w-7xl mx-auto px-4">
     <div class="border-b border-gray-200 pb-4 mb-8">

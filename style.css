@@ -1,71 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f4f4f6;
-  color: #222222;
-  margin: 0;
-  padding: 0;
+/* Rolagem suave ao clicar nos links do menu */
+html {
+  scroll-behavior: smooth;
 }
 
-/* Barra do Topo */
-.top-bar {
-  background-color: #111111;
-  color: #ffffff;
-  font-size: 0.75rem;
-  padding: 6px 0;
+/* Configuração de cores personalizadas da Fran Plast */
+:root {
+  --brand-red: #D32F2F;
+  --brand-dark: #1E1E1E;
 }
 
-/* Header E-commerce */
-.main-header {
-  background-color: #ffcc00; /* Amarelo ouro estilo Plas Brás */
-  border-bottom: 4px solid #d32f2f;
+/* Transições das Imagens */
+img {
+  transition: transform 0.3s ease, opacity 0.2s ease;
 }
 
-/* Banner de Orçamento */
-.banner-orcamento {
-  background: linear-gradient(90deg, #d32f2f 0%, #b71c1c 100%);
-  color: #ffffff;
-  box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
-}
-
-/* Botoes de Filtro de Categoria */
-.btn-categoria {
-  background-color: #ffffff;
-  color: #333;
-  border: 1px solid #e0e0e0;
-  font-weight: 600;
-  transition: all 0.2s ease;
-}
-
-.btn-categoria:hover, .btn-categoria.active {
-  background-color: #d32f2f;
-  color: #ffffff;
-  border-color: #d32f2f;
-}
-
-/* Cards de Produtos */
+/* Card de Produto com efeito de foco ao passar o cursor */
 .product-card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  transition: all 0.2s ease-in-out;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .product-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-  border-color: #ffcc00;
+  box-shadow: 0 12px 24px -5px rgba(0, 0, 0, 0.12);
 }
 
-/* Modal Estilo Pop-up E-Commerce */
+/* Estilos da Modal (Janela Pop-up estilo e-commerce) */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.65);
   backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
@@ -84,22 +50,36 @@ body {
 .modal-content {
   background: #ffffff;
   width: 90%;
-  max-width: 780px;
-  border-radius: 12px;
+  max-width: 750px;
+  border-radius: 16px;
   overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
   position: relative;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+  transform: translateY(0);
 }
 
 .close-btn {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 16px;
+  right: 16px;
   background: #f1f5f9;
   border: none;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn:hover {
+  background: #e2e8f0;
 }
